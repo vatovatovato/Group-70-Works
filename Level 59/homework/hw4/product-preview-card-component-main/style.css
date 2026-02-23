@@ -1,0 +1,77 @@
+* {
+    position: relative;
+    /* border: 2px solid black; */
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+p { 
+    position: relative;
+    left: 10px;
+    color: hsl(228, 12%, 48%);
+    font-family: "Open Sans", sans-serif;font-optical-sizing: auto;font-weight: normal;font-style: normal;font-variation-settings:   "wdth" 100;}
+
+img {
+    width: 345px;
+    height: 458px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+h1 {color: hsl(212, 21%, 14%);
+position: relative;
+left: 10px;}
+
+h2 {color: hsl(158, 36%, 37%);}
+
+
+button{
+    background-color: hsl(158, 42%, 18%);
+    color: white;
+}
+
+.c {
+    display: grid;
+    grid-template-columns: 345px 345px;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+
+.container {
+    width: 345px;
+    height: 445px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+}
+
+p.perfumeText {
+    letter-spacing: 6px;
+}
+
+h2 {
+    display: inline;
+    left: 80px;
+    top: 40px;
+}
+h4 {
+    display: inline;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    position: relative;
+    left: 100px;
+    top: 40px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    top: 60px; left: 60px;
+}
+button:active {
+    background-color: hsl(158, 43%, 24%);
+}

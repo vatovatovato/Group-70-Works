@@ -1,0 +1,54 @@
+/* default styles for every tag */
+* {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: hsl(30, 10%, 34%);
+}
+
+body {
+    background-color: hsl(30, 54%, 90%);
+}
+
+div.container {
+    background-color: hsl(330, 100%, 98%);
+    display: grid;
+    width: 60%;
+    margin-left: 300px;
+}
+
+div.child {
+    margin-left: 50px;
+}
+img {
+    width: 800px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+h1 { 
+  font-family: "Young Serif", serif;
+  font-weight: 100;
+  color: black;
+}
+
+h4 {
+    color: hsl(332, 51%, 32%);
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+}
+
+b {
+    color: hsl(24, 5%, 18%);
+}
+
+strong {
+    color: hsl(14, 45%, 36%);
+}
+
+li::marker {
+    color: hsl(14, 45%, 36%);
+}

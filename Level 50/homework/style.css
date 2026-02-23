@@ -1,0 +1,21 @@
+div#container {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 200px 100px 100px;
+
+    
+}
+
+#child {
+    background-color: blue;
+    border: 2px solid black;
+}
+
+#child2 {
+     background-color: blue;
+    border: 2px solid black;
+    grid-row: span 2;
+}

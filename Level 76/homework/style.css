@@ -1,0 +1,128 @@
+/* level 76:
+1)ვარსკვლავის ფორმის clip-path
+პირობა:
+შექმენით ყუთი (div) ზომით 200px x 200px. 
+გამოიყენეთ clip-path, რომ ყუთი მიიღოს ვარსკვლავის ფორმა.
+
+2)CSS ცვლადები – ფერი და კიდეები
+პირობა:
+შექმენით ორი ყუთი (div) ზომით 150px x 150px.
+შექმენით ცვლადები:
+--main-color – ყუთის ფონისთვის
+--border-radius – ყუთის კიდეებისთვის
+გამოიყენეთ ცვლადები ორივე ყუთზე, ისე რომ მათი ფერი ან
+ კიდეები მარტივად შეიცვალოს ცვლადის შეცვლით.
+
+3)შერეული – სამკუთხედი + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 200px x 200px.
+შექმენით ცვლადი --shape-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს სამკუთხედი
+4) შერეული – მრავალკუთხა + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 250px x 250px.
+გამოიყენეთ ცვლადი --main-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს მრავალკუთხა (polygon) ფორმის
+ცვლადის შეცვლისას ყუთის ფერი ავტომატურად შეიცვლება
+5)ააწყეთ dark\light mode css ით როგორც გაკვეთილზე ავაწყეთ.
+6)გაკეთეთ 3d Card Flip როგორი გაჩვენეტ გაკვეთილზე. */
+
+/* 1 */
+div.star {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+/* 2)CSS ცვლადები – ფერი და კიდეები
+პირობა:
+შექმენით ორი ყუთი (div) ზომით 150px x 150px.
+შექმენით ცვლადები:
+--main-color – ყუთის ფონისთვის
+--border-radius – ყუთის კიდეებისთვის
+გამოიყენეთ ცვლადები ორივე ყუთზე, ისე რომ მათი ფერი ან
+ კიდეები მარტივად შეიცვალოს ცვლადის შეცვლით. */
+ :root {
+    --main-color: red;
+    --borrad: 50%;
+
+    --shape-color: blue;
+ }
+
+.vDiv1 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: var(--main-color);
+}
+
+.vDiv2 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: var(--main-color);
+    border-radius: var(--borrad);
+}
+
+
+/* 3)შერეული – სამკუთხედი + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 200px x 200px.
+შექმენით ცვლადი --shape-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს სამკუთხედი */
+
+.trian-div {
+    background-color: var(--shape-color);
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+
+/* 4) შერეული – მრავალკუთხა + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 250px x 250px.
+გამოიყენეთ ცვლადი --main-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს მრავალკუთხა (polygon) ფორმის
+ცვლადის შეცვლისას ყუთის ფერი ავტომატურად შეიცვლება */
+
+.mult {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+}
+
+/* 5)ააწყეთ dark\light mode css ით როგორც გაკვეთილზე ავაწყეთ. */
+
+
+/* Light theme (default) */
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+.app {
+  background: var(--bg);
+  color: var(--text);
+  width: 100vh;
+  padding: 40px;
+  transition: 0.3s;
+}
+
+#theme-toggle {
+  display: none;
+}
+
+#theme-toggle:checked ~ .app {
+  --bg: #111111;
+  --text: #ffffff;
+}
+
+

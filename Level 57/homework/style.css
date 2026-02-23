@@ -1,0 +1,213 @@
+ /* davaleba 1 */
+ /* pseudo class - gamoiyeneba saitis gastilvistis, pseudo classebi yvelganaa da dzalian sachiroa saitis vizualuri mxaristvis */
+
+ /* davaleba 2 */
+ /* hover - animacia romelic xdeba tegze cursoris gadasmis shemdeg */
+
+
+ /* davaleba 3 */
+
+#btn1 {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    transition: 1.5s;
+}
+
+#btn1:hover {
+    background-color: red;
+}
+
+
+/* davaleba 4 */
+#div1 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: 0.5s;
+}
+
+#div1:hover {
+    transform: rotate(180deg);
+    width: 110px;height: 110px;
+    border-radius: 20px;
+}
+
+/* davaleba 5 */
+#div2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(151, 151, 255);
+}
+
+#div2:hover {
+    animation-name: div2;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes div2 {
+    0% {
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+
+/* davaleba 6 */
+/* active - animacia romelic xdeba tegze daklikebis dros */
+
+/* davaleba 7 */
+#btn2 {
+    width: 200px;
+    height: 25px;
+    transition: 0.5s;
+}
+
+#btn2:hover {
+    width: 220px;
+    height: 45px;
+}
+#btn2:active {
+    width: 180px;
+    height: 20px;
+}
+
+
+/* davaleba 8 */
+#div3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    transition: 0.2s;
+}
+#div3:active {
+    transform: rotate(-45deg);
+}
+
+/* davaleba 9 */
+#btn3 {
+    width: 220px;
+    height: 40px;
+    transition: 1.5s;
+    border: 2px solid black;
+    outline: 1px solid black;
+}
+
+#btn3:active {
+    background-color: black;
+    padding-top: 20px;
+    color: gray;
+}
+
+
+
+/* davaleba 10 */
+/* focus - animacia romelic xdeba iset tag-ebze romelzec
+fokuzireba shesadzlebelia, rogoricaa input,button,
+animacia xdeba fokuzirebis shemdeg */
+
+/* davaleba 11 */
+
+#inp1 {transition: 1.5s;}
+
+#inp1:focus {
+    box-shadow: 2px 1px 4px gray;
+    transform: scale(1.1);
+}
+
+/* davaleba 12 */
+#tear1 {
+    transition: 0.5s;
+}
+#tear1:focus {
+    background-color: rgb(183, 183, 183);
+    border: 3px solid black;
+    border-radius: 10px;
+    
+}
+
+
+/* davaleba 13 */
+/* cheked - animacia romelic xdeba gilakis an radio gilakis gachekvis shemdeg,
+aseve mushaobs select option tagebze */
+
+
+
+/* davaleba 14 */
+.l1 {
+    color: white;
+}
+
+#ckb1:checked + .l1 {
+    color: red;
+}
+
+
+ /* davaleba 15 */
+ /* valid, invalid - mushaobs inputebze, tu inputis veli sworia
+ mashin gamova valid, tu inputi arasworia mashin gaeshveba invalid */
+
+ /* davaleba 16 */
+ #inpEm {
+    width: 200px;
+    height: 20px;
+ }
+
+ #inpEm:valid {
+    border: 2px solid greenyellow;
+ }
+ #inpEm:invalid {
+    border: 2px solid red;
+ }
+
+
+ /* davaleba 17 */
+ #inpEm1 {
+    width: 200px;
+    height: 20px;
+ }
+
+ #inpEm1:valid {
+    background-color: green;
+ }
+ #inpEm1:invalid {
+    background-color: red;
+ }
+
+
+ /* davaleba 18 */
+ /* target - tu tagis ID emtxveva URL(a tag) is misamarts
+ mashin targeti iwyebs mushaobas */
+
+ /* davaleba 19 */
+
+div#cont1:target {
+    background-color: red;
+}
+
+div#cont2:target {
+    background-color: blue;
+}
+
+div#cont3:target {
+    background-color: green;
+}
+
+
+  /* davaleba 20 */
+  /* is - nishnavs yvela tegs da uwers stils */
+
+  /* davaleba 21 */
+:is(h1,h2,h3) {
+    color: red;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: blue;
+}

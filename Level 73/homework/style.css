@@ -1,0 +1,13 @@
+/* 1 */
+.active-text {
+    color: pink;
+    background-color:  black;
+}
+
+/* 6 */
+.hidden-class {
+    color: white;
+}
+.newText {
+    color: black;
+}

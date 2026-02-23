@@ -1,0 +1,156 @@
+/* დავალება 1 */
+/* transform: skew() ელემენტს უკეთებს დახრას */
+
+/* დავალება 2 */
+/* transform-origin გვაძლევს საშუალებას საწყისი ადგილი მივცეთ transoform-ის დაწყებას,
+მაგალითად: */
+
+.firstC {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transform-origin: top left;
+    transform: rotate(30deg);
+}
+
+/* დავალება 3:
+transition ითვლის დროს, ანიმაცია რა დროის მანძილზე უნდა გაკეთდეს.
+თუ წერია რომ transition უნდა იყოს 1s(ანუ ერთი წამი), ანიმაცია შესრულდება
+ერთი წამის განმავლობაში(თუ არ გავუწერთ transition-ს ანიმაცია უცებ გაკეთდება
+და არ იქნება ლამაზი, 1წამის მანძილზე შესრულებული ანიმაცია უფრო ლამაზად
+გამოჩნდება ეკრანზე
+*/
+
+
+/* დავალება 4*/
+
+#secondC {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: 2s;
+}
+
+#secondC:hover {
+    transform: skew(10deg, 5deg);
+}
+
+/* დავალება 5 */
+
+#third {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition: 1.6s ease-in-out;
+}
+
+#third:hover {
+    transform: scale(1.3);
+}
+
+
+/* davaleba 6 */
+#fourth {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+   transition: 2s ease-in;
+   transform-origin: top left; 
+}
+#fourth:hover {
+    transform: rotate(75deg);
+}
+
+
+/* დავალება7 */
+div.parent {
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    padding: 20px;
+}
+
+.child1 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 228, 38);
+    border: 2px solid black;
+    transform-origin: center;
+    transition: 1.5s;
+}
+.child1:hover {
+    transform: rotate(20deg);
+}
+
+.child2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(137, 137, 216);
+    border: 2px solid black;
+    transform-origin: top;
+    transition: 1.5s;
+}
+.child2:hover {
+    transform: rotate(20deg);
+}
+
+.child3 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    border: 2px solid black;
+    transform-origin: bottom;
+    transition: 1.5s;
+}
+.child3:hover {
+    transform: rotate(20deg);
+}
+/* მათზე transform-origin მოქმედებს როგორც ლურსმანი, მათი საკიდია თითქოს. */
+
+
+ /* დავალება 8 */
+#eightC {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all 0.5s ease;
+    transform: translateX(100px);
+}
+
+#eightC:hover {
+    transform: skew(10deg);
+}
+
+
+/* davaleba 9 */
+div#nineC {
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    transform: skew(10deg);
+    transition: 1.5s;
+}
+
+div#nineC:hover {
+    transform: skew(0deg);
+}
+
+
+/* davaleba 10 */
+#tenC {
+    width: 100px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: chocolate;
+    transition: 1.5s;
+}
+
+#tenC:hover {
+    transform: scale(1.2) /*ზრდის სიგრძე სიგანეში*/;
+    transform: rotate(40deg) /*ატრიალებს*/;
+    transform: skew(3deg) /*ხრის*/;
+    transform: translateX(100px) /*ამოძრავებს x ღერძზე*/;
+    /* transform: translateY(-10px) /*ამოძრავებს y ღერძზე*/; 
+
+}
