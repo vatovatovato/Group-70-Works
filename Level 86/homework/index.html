@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- 1) შექმენი პროფილის ბარათი (profile card) რომელსაც ექნება რბილი shadow და სრულად მომრგვალებული პროფილის სურათი. -->
+
+    <div class="w-20 h-20 bg-red-600 rounded-full shadow-1"></div>
+
+<!-- 2) გააკეთე gradient ღილაკი, რომელიც hover-ზე ოდნავ იზრდება ზომაში და ფერები მსუბუქად იცვლება. დაამატე transition ეფექტი. -->
+ <button class="w-20 h-10 bg-gradient-to-r from-red-500 to-blue-600 text-white hover:scale-110 transition duration-300">Click me</button>
+
+
+<!-- 3) შექმენი 3 ბარათის grid განლაგება, სადაც შუა ბარათს ექნება უფრო დიდი shadow ვიდრე დანარჩენებს. -->
+<div class="grid grid-cols-3 border-2">
+    <div class="w-10 h-10 bg-red-500"></div>
+    <div class="w-10 h-10 bg-blue-500 shadow-md"></div>
+    <div class="w-10 h-10 bg-pink-500"></div>
+</div>
+
+<!-- flex-col / flex-direction:column
+     justify-end / justify-content: end
+     items-center / align-items: center
+
+
+     grid-cols-2: grid-template-columns: 2
+     grid-rows-2: grid-template-rows: 2
+     
+     -->
+<!-- 4) გააკეთე flex ნავიგაცია (navbar), სადაც ლინკები ჰორიზონტალურად არის
+  განლაგებული და hover-ზე ქვედა ხაზით ან ფერის ცვლილებით რეაგირებს. -->
+<br>
+  <nav class="m-0 p-0 w-100% h-20 bg-blue-600 flex flex-row gap-20 justify-center items-center">
+    <a href="#" class="p-2 hover:underline hover:text-blue-400  duration-300">Home</a>
+    <a href="#" class="p-2 hover:underline hover:text-blue-400  duration-300">Contact</a>
+    <a href="#" class="p-2 hover:underline hover:text-blue-400  duration-300">register</a>
+  </nav>
+</body>
+</html>

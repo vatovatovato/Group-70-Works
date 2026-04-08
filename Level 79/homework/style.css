@@ -1,0 +1,68 @@
+/* 1) შექმენი div ბლოკი ფიქსირებული სიგანით და 
+::before-ის გამოყენებით დაამატე ხაზი, რომლის 
+სიგანე იქნება calc(100% - 40px). */
+div.container {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+}
+
+div.container::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(13, 255, 0);
+    height: 20px;
+    width: calc(100% - 40px);
+    
+}
+
+/* 2) შექმენი სათაური (h1) და ::after-ით დაუმატე ქვედა ხაზი, 
+რომლის სიგანე გამოითვლება calc(100% / 2). */
+h1 {
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    width: calc(100% / 2);
+    height: 1px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+}
+
+/* 3) შექმენი ღილაკი და ::before-ით დაამატე ფონი, რომელიც ღილაკზე 
+10px-ით პატარაა (width: calc(100% - 20px), height: calc(100% - 20px)). */
+button#btn {
+    position: relative;
+    width: 100px;
+}
+
+#btn::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: green;
+    left: 0;
+    top: 0;
+}
+
+
+/* 4) შექმენი p ელემენტი და ::after-ით დაამატე ბლოკი, რომლის 
+მარცხენა დაშორება იქნება calc(50% - 25px) */
+
+.text {
+    position: relative;
+}
+
+.text::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    left: calc(50% - 25px);
+}

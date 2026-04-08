@@ -1,0 +1,251 @@
+/* 1)  შექმენი ბარათი, რომელიც hover-ზე გაიზრდება, ოდნავ აიწევს ზემოთ და ნელა დატრიალდება 5 გრადუსით. */
+
+div.first {
+    width: 100px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+    transition: 1.5s;
+}
+
+div.first:hover {
+    margin-top: -10px;
+    transform: rotate(5deg);
+    width: 110px;
+    height: 260px;
+}
+
+/* 2) გააკეთე სურათი, რომელიც hover-ზე გადიდდება
+ და ცენტრიდან გაიზრდება ისე, რომ კონტეინერს არ გაცდეს. */
+
+div.second-main {
+    width: 200px;
+    height: 100px;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+img.second {
+    width: 200px;
+    height: 100px;
+    transition: 1.5s;
+}
+
+img.second:hover {
+    transform: scale(1.5);
+}
+
+/* 3) შექმენი ღილაკი, რომლის შიგნით არსებული
+ ტექსტი hover-ზე მარჯვნივ გადაიწევს, ხოლო ღილაკის ფონიც შეიცვლება. */
+button.third-btn {
+    width: 120px;
+    height: 30px;
+    transition: 2.5s;
+}
+
+button.third-btn:hover {
+    background-color: red;
+}
+
+i.third-i {
+    font-size: 20px;
+    transition: 1.5s;
+    position: relative;
+}
+
+i.third-i:hover {
+    margin-left: 20px;
+
+}
+/* 4) გააკეთე ბარათი, რომელიც hover-ზე 
+გადაიხრება 3D ეფექტით (rotateX ან rotateY). */
+div.four {
+    width: 100px;
+    height: 200px;
+    background-color: rgb(7, 119, 88);
+    transition: 1.5s;
+    border-radius: 10px;
+}
+
+div.four:hover {
+    transform: rotateX(50deg);
+    transform: rotateY(180deg);
+    background-color: red;
+}
+
+/* 5) შექმენი ელემენტი, რომელიც hover-ზე ოდნავ
+ შემცირდება და შემდეგ ნელა დაბრუნდება საწყის ზომაზე. */
+
+div.five {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin-top: 10px;
+    transition: 1.5s ease-in-out;
+}
+
+div.five:hover {
+    transform: scale(0.8);
+}
+
+/* 6) გააკეთე სურათების გალერეა, სადაც hover-ზე 
+მხოლოდ არჩეული სურათი გაიზრდება
+, დანარჩენები კი ოდნავ შემცირდება. */
+
+div.six-container {
+    margin-top: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+img.d {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+img.d:hover {
+    transform: scale(1.1);
+}
+/* 
+7) შექმენი ღილაკი, რომელსაც hover-ზე გამოუჩნდება
+ ქვედა ხაზის ანიმაცია (ხაზი transform-ით გაიზარდოს). */
+
+.seven {
+    padding: 20px;
+    font-size: 20px;
+    transition: transform 2.5s;
+    position: relative;
+}
+
+.seven::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    transform: scaleX(0);
+    transition: 2.3s;
+}
+
+.seven:hover::after {
+transform: scaleX(1);
+}
+
+/* 8) გააკეთე ბარათი, რომელიც hover-ზე გადაბრუნდება და უკანა
+ მხარეს სხვა ინფორმაცია გამოჩნდება (flip card ეფექტი). */
+
+div.eight-main {
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+div.hold-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1.5s;
+}
+
+div.hold-div:hover {
+    transform: rotateY(180deg);
+}
+
+div.front-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+div.back-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+/* 9) შექმენი ელემენტი, რომელიც hover-ზე 
+დიაგონალურად გადაიწევს (translateX და translateY ერთად გამოიყენე). */
+
+
+div.nine {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellow;
+    transition: 1.5s;
+}
+
+div.nine:hover {
+    transform: translate(100px, 100px);
+}
+
+/* 10) გააკეთე ნავიგაციის მენიუ, სადაც hover-ზე
+ ლინკი ოდნავ გაიზრდება და ქვემოდან ზემოთ ამოვა. */
+
+ nav.ten {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(102, 100, 100);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+ }
+
+a.t {
+    font-size: 30px;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 3.5s;
+}
+
+a.t:hover {
+    position: relative;
+    background-color: gray;
+    bottom: 5px;
+    transform: scale(1.1);
+}
+
+
+/* 11) შექმენი სურათი, რომელსაც hover-ზე
+ ექნება zoom + მცირე rotate ეფექტი ერთდროულად. */
+
+ div.eleven {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+ }
+
+ img.eleven-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transition: 1.5s;
+ }
+
+ img.eleven-img:hover {
+    transform: scale(1.2);
+    transform: rotate(5deg);
+ }
+
