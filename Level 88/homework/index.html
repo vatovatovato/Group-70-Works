@@ -4,64 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-
-
-     <!-- level 88:
-1) შექმენი 8 ბარათის სექცია grid-ით.
-
+<!--1) შექმენი 8 ბარათის სექცია grid-ით.
 Mobile-ზე 1 სვეტი
-
 md-ზე 2 სვეტი
-
 lg-ზე 3 სვეტი
-
 xl-ზე 4 სვეტი
-
 2xl-ზე 5 სვეტი
 ბარათებს დაუმატე shadow-lg, rounded-2xl, p-6, transition.
 Hover-ზე ბარათი ოდნავ გაიზარდოს (hover:scale-105) და ჩრდილი გაძლიერდეს.
 დამატებითი პირობა: პირველი ბარათი ყოველთვის 2 სვეტს იკავებდეს (col-span-2) lg ზომიდან ზემოთ. -->
-    <!--
+    <div class="grid gap-2 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 2xl:grid-cols-5 sm:grid-cols-2" >
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl lg:col-span-2 xl:col-span-2 2xl:col-span-2" >1</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">2</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">3</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">4</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">5</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">6</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">7</div>
+        <div class="w-10 h-10 bg-red-500 text-red-100 shadow-lg rounded-2xl p-6 hover:scale-105 duration-300 hover:shadow-2xl">8</div>
+    </div>
 
-2) შექმენი მრგვალი ღილაკი, რომელსაც აქვს animate-bounce, მაგრამ:
+   
+
+<!-- 2) შექმენი მრგვალი ღილაკი, რომელსაც აქვს animate-bounce, მაგრამ:
 
 მხოლოდ mobile და md ზომაზე მუშაობდეს
 
 lg-დან ზემოთ animation შეწყდეს
 Hover-ზე შეიცვალოს ფონი და ტექსტის ფერი.
-დამატებითი პირობა: focus-ზე დაემატოს ring ეფექტი (focus:ring-4) და animation შეწყდეს focus დროს.
+დამატებითი პირობა: focus-ზე დაემატოს ring ეფექტი (focus:ring-4) 
+და animation შეწყდეს focus დროს. -->
+<button class=" animate-bounce
+ bg-blue-700 rounded-sm hover:bg-blue-500
+  hover:text-white duration-300 focus:ring-4 focus:animate-none
+    lg:animate-none">Sumit</button>
 
-3) შექმენი loader 5 ელემენტით (flex gap-3).
+
+
+<!-- 3)შექმენი loader 5 ელემენტით (flex gap-3).
 ყველას ჰქონდეს animate-pulse, მაგრამ განსხვავებული delay (გამოიყენე arbitrary value: [animation-delay:200ms] და ა.შ.).
 ზომები იყოს განსხვავებული (w-2 h-2 ... w-6 h-6).
 Loader იყოს ვერტიკალურად და ჰორიზონტალურად ცენტრში.
-დამატებითი პირობა: dark mode-ზე ფერი შეიცვალოს (dark:bg-white).
+დამატებითი პირობა: dark mode-ზე ფერი შეიცვალოს (dark:bg-white). -->
+<div class="flex gap-3 justify-center items-center">
+    <div class="w-2 h-2 bg-red-500 rounded-full transition  animate-pulse [animation-delay:200ms]">a</div>
+    <div class="w-3 h-3 bg-red-500 rounded-full transition  animate-pulse [animation-delay:400ms]">b</div>
+    <div class="w-4 h-4 bg-red-500 rounded-full transition  animate-pulse [animation-delay:500ms]">c</div>
+    <div class="w-5 h-5 bg-red-500 rounded-full transition  animate-pulse [animation-delay:600ms]">d</div>
+    <div class="w-6 h-6 bg-red-500 rounded-full transition  animate-pulse [animation-delay:700ms]">e</div>
+</div>
 
-4) შექმენი responsive sidebar layout:
 
-Desktop-ზე sidebar ფიქსირებული იყოს მარცხნივ (fixed)
-
-Content-ს ჰქონდეს ml-64
-
-Mobile-ზე sidebar იყოს -translate-x-full და ღილაკზე დაჭერისას გამოჩნდეს
-
-Sidebar-ს ჰქონდეს smooth transition (transition-all duration-300)
-დამატებითი პირობა: აქტიურ მენიუს ელემენტს ჰქონდეს განსხვავებული ფონი და მარცხენა border (border-l-4).
-
-5) შექმენი advanced card hover ეფექტით:
-
+<!--5) შექმენი advanced card hover ეფექტით:
 transform
-
 rotate-2
-
 scale-105
-
 hover:-translate-y-3
-
 transition duration-500 ease-in-out
 Hover-ზე card-ის შიგნით არსებული ღილაკი გამოჩნდეს (opacity-0 → opacity-100).
 დამატებითი პირობა: გამოიყენე group და group-hover. -->
+
+<div class="flex justify-center w-40 h-80 rounded-2xl bg-pink-600 hover:transform hover:rotate-2 hover:translate-y-3 hover:scale-105 duration-500 ease-in-out">
+    <button class="opacity-0 hover:opacity-100 w-20 h-5 bg-blue-300">hello</button></div>
+
 </body>
 </html>

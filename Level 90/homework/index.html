@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+<!-- 1) შექმენი flex container 4 ელემენტით. ელემენტები იყოს ცენტრში განლაგებული და ერთმანეთთან 
+ჰქონდეს თანაბარი დაშორება. თითოეულ ელემენტს მიეცი განსხვავებული background color, padding და rounded კუთხეები. -->
+<div class="flex justify-center items-center gap-4">
+    <div class="w-10 h-15 rounded-sm bg-red-300 p-2"></div>
+    <div class="w-20 h-5 rounded-2xl bg-blue-500 p-5"></div>
+    <div class="w5 h-13 rounded-lg bg-pink-200 p-10"></div>
+    <div class="w-32 h-12 rounded-full bg-yellow-500 p-7"></div>
+</div>
+
+
+ <!-- 2) შექმენი grid layout 8 ბარათით.
+მობილურზე იყოს 2 სვეტი, ტაბლეტზე 3 სვეტი, ხოლო desktop-ზე 4 სვეტი. ბარათებს დაუმატე shadow, padding და rounded corners. -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2xl">1</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">2</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">3</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">4</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">5</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">6</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">7</div>
+    <div class="w-40 h-15 bg-red-500 p-2 rounded-2x">8</div>
+</div>
+
+<!-- 3) შექმენი responsive ტექსტის ზომა.
+ტექსტი მობილურზე იყოს პატარა, ტაბლეტზე საშუალო ზომის, ხოლო desktop-ზე დიდი. ასევე ტექსტი იყოს bold. -->
+<p class="font-bold xl:text-8xl lg:text-6xl md:text-4xl sm:text-2xl">Hello my name is vato, i am 16 years old and i want to become a great programmist</p>
+
+<!-- 4) შექმენი div arbitrary values გამოყენებით,
+  სადაც width და height იქნება custom მნიშვნელობებით. ასევე გამოიყენე arbitrary margin და padding. -->
+  <div class="w-[100px] h-[100px] m-[20px] p-[10px] bg-red-500"></div>
+
+<!-- 5) შექმენი overlay ელემენტი:
+ერთი დიდი ელემენტი იყოს ქვედა ფენაში და მეორე პატარა ელემენტი ზემოდან, ისე რომ ნაწილობრივ ფარავდეს ქვედას. -->
+<div class="w-[50px] h-[50px] relative bg-red-500">
+    <div class="w-[40px] h-[40px] absolute bg-red-300 left-[20px]"></div>
+</div>
+
+</body>
+</html>
