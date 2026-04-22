@@ -1,0 +1,26 @@
+<!-- 3.შექმენი ღილაკი, რომელზე დაჭერისას იზრდება რიცხვი (counter) და ეკრანზე გამოჩნდება რამდენჯერ დააჭირა მომხმარებელმა -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    
+    <p id="text" class="text-black text-size-20">Click times: 0</p>
+    <button id="btn" class="bg-black text-white px-4 py-3 pointer">Click me for count</button>
+
+    <script>
+        const btn = document.getElementById('btn')
+        const t = document.getElementById('text')
+
+        let counterNum = 0 
+        btn.addEventListener('click', function() {
+            t.textContent = `click times: ${counterNum += 1}`
+        })
+    </script>
+</body>
+</html>

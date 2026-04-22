@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <!-- 2.შექმენი div (კვადრატი), რომელზე დაჭერისას იცვლება ფერი წითლიდან მწვანეზე და ისევ უკან -->
+
+    <div class="w-50 h-50 bg-red-500" id="cont"></div>
+    <button id="btn" class="p-5 bg-black"></button>
+
+    <script>
+        const cont = document.getElementById('cont')
+        const btn = document.getElementById('btn')
+
+        
+        btn.addEventListener('click', function() {
+            cont.style.backgroundColor = blue
+        })
+    </script>
+</body>
+</html>

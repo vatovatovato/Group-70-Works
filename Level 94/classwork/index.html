@@ -1,0 +1,34 @@
+<!-- level 94:
+1) შექმენი მარტივი ფორმა 3 სექციით:
+ინფორმაცია (სახელი, გვარი)
+კონტაქტი (email, ტელეფონი)
+დამატებითი ინფორმაცია (textarea)
+ფორმას გაუკეთე ლამაზი დიზაინი Tailwind-ით (spacing, border, focus effects).
+2) იმავე ფორმაში დაამატე input-ებზე focus ეფექტები (მაგ. focus:ring, focus:border) და შეცვალე ფერები შენი custom theme-დან.
+3) ფორმის ბოლოში დაამატე submit ღილაკი, რომელსაც ექნება hover და active ეფექტები (scale, color change). ასევე გამოიყენე transition, რომ ანიმაცია იყოს გლუვი.
+
+4) დაამატე Tailwind config-ში ორი ახალი ფერი . შემდეგ შექმენი სამი ბლოკი (div), სადაც თითოეულს ექნება განსხვავებული background (primary, secondary, accent) და ტექსტი. თითოეულზე დაამატე hover ეფექტი, რომ ფერი ოდნავ შეიცვალოს.
+5) შეცვალე არსებული primary ფერი სხვა მნიშვნელობით (მაგ. მწვანე ან წითელი) და შეამოწმე როგორ იცვლება უკვე გამოყენებული დიზაინი. დაამატე კიდევ ერთი ელემენტი (button), რომელიც იყენებს ამ ახალ ფერს.
+
+6) შექმენი სურათების გალერეა (3-4 სურათი), სადაც თითოეულ სურათზე გამოიყენებ Tailwind-ის filters (მაგ. blur, grayscale, brightness). დაამატე hover ეფექტები ისე, რომ მაუსის მიტანისას filter შეიცვალოს (მაგ. blur გაქრეს ან brightness გაიზარდოს). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-screen h-screen flex justify-center items-center">
+    
+    <form class="border-2 w-100 h-130 flex
+    flex-col">
+        <input type="text" placeholder="enter your username" class="border-2"> <br>
+        <input type="email" placeholder="enter your email" class="border-2"> <br>
+        <input type="textarea" placeholder="add some info" class="border-2"> <br>
+        <button type="button" class="border-2">Submit</button>
+    </form>
+</body>
+</html>

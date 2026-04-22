@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- - 1) შექმენი ბარათი (card), რომელსაც აქვს სურათი და ტექსტი.
+როდესაც მაუსს ბარათზე მიიტან:
+სათაური შეიცვალოს ფერი
+სურათი ოდნავ გაიზარდოს
+გამოიყენე group utilities. -->
+<div class="flex flex-col w-60 h-60 border-2 justify-center items-center group">
+    <p class="group-hover:text-gray-500">this is code text</p>
+    <img src="./image.png" class="w-50 h-50 group-hover:scale-104 duration-300">
+</div>
+
+
+<!-- 2) შექმენი ღილაკი.
+როდესაც მაუსს მიიტან მთელ ღილაკზე:
+icon ოდნავ გადაადგილდეს მარჯვნივ
+ტექსტი გახდეს უფრო მუქი
+გამოიყენე group-hover. -->
+<button class="w-[120px] h-[40px] bg-gray-300 rounded-2xl group hover:bg-gray-400 duration-300"><i class="relative group-hover:left-3 group-hover:font-bold">Click me</button>
+
+
+<!-- 3) გააკეთე input ველი.
+თუ input ცარიელია:
+ქვემოთ გამოჩნდეს წითელი ტექსტი ("Field is required")
+თუ მომხმარებელი რაღაცას დაწერს:
+ეს ტექსტი გაქრეს
+გამოიყენე peer utilities. -->
+<br>
+<input type="text" class="border-2" id="btn">
+
+
+<!-- 4)გააკეთე checkbox.
+როდესაც checkbox მონიშნულია:
+გვერდით ტექსტი გახდეს მწვანე
+ტექსტი გახდეს bold
+გამოიყენე peer-checked. -->
+<br>
+<input type="checkbox" class="peer"> <p class="inline text-white peer-checked:text-green-700 peer-checked:font-bold">Hello world</p>
+
+
+<!-- 5) შექმენი დიდი სათაური.
+მისი ზომა უნდა იცვლებოდეს ეკრანის ზომის მიხედვით.
+გამოიყენე clamp(min, preferred, max) ისე რომ:
+პატარა ეკრანზე იყოს პატარა
+დიდ ეკრანზე იყოს დიდი
+შუაში იყოს ადაპტური. -->
+
+<h1 class="text-[clamp(2rem,5vh,4rem)]">This is a large text. hello world ma man</h1>
+
+<!-- 6) შექმენი ღილაკი.
+როდესაც მაუსს მიიტან:
+გაჩნდეს ring ეფექტი ღილაკის გარშემო
+ფერი იყოს მაგალითად purple. -->
+<button class="bg-gray-300 p-3 rounded-2xl hover:ring-1 hover:bg-purple-400 duration-300">Click me btn</button>
+
+
+<!-- 7) შექმენი ჰორიზონტალური gallery რამდენიმე სურათით.
+როდესაც მომხმარებელი ასქროლებს:
+სურათები ზუსტად გაჩერდეს ცენტრში
+გამოიყენე scroll snap utilities. -->
+
+    <!--
+8) გააკეთე card description ტექსტი.
+ტექსტი უნდა გამოჩნდეს მხოლოდ 3 ხაზამდე.
+თუ ტექსტი უფრო გრძელია:
+ბოლოში გამოჩნდეს "...".
+გამოიყენე line-clamp. -->
+
+<p class="line-clamp-3 font-bold">გეოგრაფია · ისტორია · მეცნიერება · რელიგია · საზოგადოება · სამართალი · სპორტი · ხელოვნება · საქართველო
+can also be referred to as states with limited recognition, constituent countries, or dependent territories, with their own government.[1][2][3][4] A country may consist of multiple nations, a structure known as a multinational state.[5] Countries are often distinguished as developing countries or developed countries.[6]
+There is no universal agreement on the number of "countries" in the world.[7][8] This ambiguity is a result of several countries not being recognized as sovereign states by the UN system, but are recognized by at least one UN member, known as "diplomatic recognition'. These countries often have disputed territories and have only partial recognition.[8] A number of entities without recognition are also commonly considered a country.[8][9]
+Areas other than a political entity may be referred to as a "country", such as the West Country in England, "big sky country" (used in various contexts of the American West), "coal country" (used to describe coal-mining regions), or simply "the country" (used to describe a rural area).[10][11] The term "country" is also used as a qualifier descriptively, such as country music, cottage country or country living.[12]
+The definition and usage of the word "country" has fluctuated and changed over time. The Economist wrote in 2010 that "any attempt to find a clear definition of a country soon runs into a thicket of exceptions and anomalies."Definition</p>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="h-screen flex justify-center items-center">
+<!-- 1.შექმენი ღილაკი ცენტრში, რომელზე დაჭერის შემდეგ
+  უნდა გამოჩნდეს ტექსტი "Hello" და ღილაკი შეიცვალოს სხვა ფერად -->
+    <button id="btn" class="bg-black text-white px-4 py-3 rounded-lg">Button</button>
+    <p id="p" class="text-white p-5 text-size-20">Hello</p>
+
+    <script>
+        const btn = document.getElementById('btn')
+        const p = document.getElementById('p')
+
+        btn.addEventListener('click', function() {
+            p.style.color = 'black'
+        })
+    </script>
+</body>
+</html>

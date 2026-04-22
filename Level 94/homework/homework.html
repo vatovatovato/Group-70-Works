@@ -1,0 +1,52 @@
+<!-- level 94:
+1) შექმენი ფორმა 2 სექციით (ლოგინი):
+email
+პაროლი
+ფორმას დაუმატე ლამაზი დიზაინი (shadow, rounded, spacing). input-ებზე გააკეთე focus ეფექტები
+ (focus:ring, focus:border) შენი custom ფერებით.
+
+ 
+2) დაამატე Tailwind config-ში custom borderRadius (მაგ. "xl2": "20px") და გამოიყენე ეს მნიშვნელობა 
+card-ზე და button-ზე, რომ დიზაინი გახდეს უფრო რბილი.
+3) შექმენი 3 ბარათის (card) grid layout, სადაც თითოეულ ბარათს ექნება სურათი, სათაური და ტექსტი.
+ გამოიყენე hover ეფექტები (scale, shadow გაზრდა).
+4) დაამატე Tailwind config-ში custom spacing (მაგ. "128": "32rem") და გამოიყენე ეს მნიშვნელობა
+ section-ის height ან padding-ში.
+5) შექმენი button-ების ჯგუფი (3 ღილაკი), სადაც თითოეულს ექნება განსხვავებული ფერი (primary,
+ secondary, accent). დაამატე hover, active (scale down) და transition ეფექტები.
+6) შექმენი სურათზე overlay ეფექტი:
+სურათზე ნაგულისხმევად იყოს dark overlay
+hover-ზე overlay გაქრეს და ტექსტი გამოჩნდეს
+გამოიყენე opacity და transition.
+7) შექმენი input ველები, სადაც შეცდომის შემთხვევაში (error state) border გახდება წითელი
+ (error color დაამატე config-ში). დაამატე პატარა error ტექსტიც input-ის ქვემოთ.
+8) შექმენი 4 სურათის გალერეა, სადაც გამოიყენებ სხვადასხვა filter-ს (grayscale, contrast, 
+brightness, sepia). hover-ზე ყველა სურათი უნდა დაბრუნდეს ნორმალურ მდგომარეობაში smooth transition-ით. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-200 w-screen h-screen flex justify-center items-center">
+
+
+    <form class="w-140 h-90 bg-gray-100 flex items-center flex-col">
+
+        <p class="font-bold text-2xl text-gray-700">Register</p><br>
+
+        <label for="em" class="text-gray-700">Enter email</label>
+        <input type="email" id="em" class="w-120 h-8 border-1 border-gray-300 p-5 rounded-lg"><br>
+
+        <label for="psw" class="text-gray-700">Enter Password</label>
+        <input type="password" id="psw" class="w-120 h-8 border-1 border-gray-300 p-5 rounded-lg focus:ring-2"><br>
+<br>
+        <button type="button" class="w-120 h-8 bg-blue-200 text-gray-950 flex items-center justify-center p-5">Submit</button>
+    </form>
+    
+</body>
+</html>
