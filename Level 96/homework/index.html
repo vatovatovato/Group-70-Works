@@ -1,0 +1,53 @@
+<!-- 1) შექმენი Advanced Form 
+ TailwindCSS-ით (Floating Label + Validation)
+შექმენი ფორმა TailwindCSS-ის
+ გამოყენებით, სადაც გამოიყენებ
+  Floating Label Input-ს (peer magic) +
+   დაამატებ ვალიდაციას.
+კრიტერიუმები:
+2) ფორმა უნდა შეიცავდეს მინიმუმ 4 input-ს:
+name
+email
+password
+confirm password
+3) label თავდაპირველად იყოს input-ის შიგნით 
+(placeholder-ის მსგავსად)
+4) focus-ის ან ტექსტის ჩაწერისას:
+label გადავიდეს ზემოთ
+შემცირდეს ზომაში
+შეიცვალოს ფერი (მაგ: primary → secondary) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-screen h-screen">
+    <form class="w-100 h-120 border-2 grid justify-center items-center">
+        <div>
+            <input type="text" placeholder=" " class="peer border-2 w-60">
+            <label class="absolute left-21 top-8 peer-focus:top-2 peer-focus:text-gray-400 peer-focus:text-sm duration-300">Enter your name</label>
+        </div>
+
+        <div>
+            <input type="text" placeholder=" " class="peer border-2 w-60">
+            <label class="absolute left-21 top-33 peer-focus:top-26 peer-focus:text-gray-400 peer-focus:text-sm duration-300">Enter your Email</label>
+        </div>
+
+        <div>
+            <input type="text" placeholder=" " class="peer border-2 w-60">
+            <label class="absolute left-21 top-57 peer-focus:top-50 peer-focus:text-gray-400 peer-focus:text-sm duration-300">Enter your Password</label>
+        </div>
+
+        <div>
+            <input type="text" placeholder=" " class="peer border-2 w-60">
+            <label class="absolute left-21 top-81 peer-focus:top-74 peer-focus:text-gray-400 peer-focus:text-sm duration-300">Confirm your password</label>
+        </div>
+
+        <button class="p-1 rounded-2xl bg-gray-400">Submit</button>
+    </form>
+</body>
+</html>
